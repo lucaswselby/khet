@@ -1,0 +1,26 @@
+:root {
+    --squareLength: 12vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#board {
+    display: grid;
+    grid: repeat(8, auto) / repeat(10, auto);
+    justify-items: center;
+    justify-content: center;
+}
+.square {
+    height: var(--squareLength);
+    width: var(--squareLength);
+    background-color: gray;
+    border: 2px solid black;
+}
+.red {
+    background-color: red;
+}
+.silver {
+    background-color: silver;
+}
