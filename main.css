@@ -1,5 +1,8 @@
 :root {
-    --squareLength: 12vh;
+    --columns: 10;
+    --rows: 8;
+    --squareBorder: 2px;
+    --squareLength: calc(100vh / var(--rows) - var(--squareBorder) * 2);
 }
 body {
     margin: 0;
@@ -8,7 +11,7 @@ body {
 
 #board {
     display: grid;
-    grid: repeat(8, auto) / repeat(10, auto);
+    grid: repeat(var(--rows), auto) / repeat(var(--columns), auto);
     justify-items: center;
     justify-content: center;
 }
@@ -16,7 +19,7 @@ body {
     height: var(--squareLength);
     width: var(--squareLength);
     background-color: gray;
-    border: 2px solid black;
+    border: var(--squareBorder) solid black;
 }
 .red {
     background-color: red;
